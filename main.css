@@ -1,0 +1,258 @@
+/*Hela bakgrund rosa*/
+body {
+  background: radial-gradient(rgb(255, 235, 239), white);
+  margin: 0;
+  font-family: arial, sans-serif;
+}
+
+.cart-icon {
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+.site-title {
+  text-align: center;
+  margin: 0;
+  padding: 20px 0 0;
+  color: rgb(0, 0, 0);
+}
+.header {
+  padding-top: 0;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+/*Tar bort punkter bredvid home osv. */
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/* göra texten horisontellt. */
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+/* ändrar designen/utseende på text*/
+a {
+  text-decoration: none;
+  color: grey;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+}
+
+p {
+  color: grey;
+}
+
+/*Samma avstånd med whitespace från kanterna och text*/
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+header {
+  background-color: rgb(255, 202, 244);
+  grid-area: header;
+}
+
+main {
+  background-color: darkorange;
+  grid-area: main;
+}
+
+aside {
+  background-color: darkslategrey;
+  grid-area: aside;
+}
+
+footer {
+  background-color: indianred;
+  grid-area: footer;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.hero .col-2 {
+  flex-basis: 45%;
+  min-width: 200px;
+}
+
+.hero .col-2 img {
+  width: 100%;
+  max-width: 520px;
+  padding: 20px 0;
+}
+.col-2 h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+}
+.btn {
+  display: inline-block;
+  background: white;
+  color: grey;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
+  transition: background 0.5s;
+}
+.btn:hover {
+  background: rgb(247, 182, 195);
+}
+
+.header {
+  background: radial-gradient(rgb(255, 235, 239), white);
+}
+
+.categories {
+  margin: 70px 0;
+}
+.col-3 {
+  flex: 25%;
+  min-width: 200px;
+  margin-bottom: 30px;
+}
+
+.col-3 img {
+  width: 100%;
+}
+/*bilder centrarade med whitespace från kanten*/
+.small-container {
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.col-4 {
+  flex-basis: 25%;
+  padding: 10px;
+  min-width: 200px;
+  margin-bottom: 30px;
+  transition: transform 0.5s; /*bilder rör på sig när musen är där.*/
+}
+.col-4 img {
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px;
+  font-size: 30px;
+  font-family: "Arial", sans-serif;
+  color: grey;
+}
+
+.title::after {
+  content: "";
+  background: rgb(244, 235, 237);
+  width: 80px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h4 {
+  color: #555;
+  font-weight: normal;
+}
+.col-4 p {
+  font-size: 14px;
+}
+.col-4:hover {
+  transform: translateY(-5px); /*bilder rör på sig när musen är där.*/
+}
+.offer {
+  background: radial-gradient(rgb(255, 235, 239), white);
+  margin-top: 80px;
+  padding: 30px 0;
+}
+
+/*footer*/
+.footer {
+  background: rgb(255, 227, 227);
+  color: grey;
+  font-size: 14px;
+  padding: 60px 0 20px;
+}
+
+.footer p {
+  color: grey;
+}
+
+.footer h3 {
+  color: grey;
+  margin-bottom: 20px;
+}
+.footer .col-1,
+.footer .col-2,
+.footer .col-3,
+.footer .col-4 {
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+.footer .col-1 {
+  flex-basis: 30%;
+}
+.footer .col-2 {
+  flex: 1;
+  text-align: center;
+}
+.footer .col-2 img {
+  width: 90px;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.footer .footer-col-2 {
+  flex: 0 0 200px;
+  margin: 0 auto;
+}
+
+.footer .col-3,
+.footer .col-4 {
+  flex-basis: 12%;
+  text-align: center;
+  object-fit: cover;
+}
+.col-3 img,
+.footer .col-4 img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.offer .col-2 {
+  flex-basis: 45%;
+}
+
+.offer-img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+}
