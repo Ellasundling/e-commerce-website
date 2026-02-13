@@ -11,6 +11,9 @@ body {
 }
 
 .site-title {
+  font-family: "Playfair Display", serif;
+  font-size: 50px;
+  letter-spacing: 4px;
   text-align: center;
   margin: 0;
   padding: 20px 0 0;
@@ -22,11 +25,15 @@ body {
 .navbar {
   display: flex;
   align-items: center;
-  padding: 20px;
+  justify-content: space-between;
+  width: 100%;
 }
 nav {
-  flex: 1;
-  text-align: right;
+  margin-left: auto;
+}
+
+.cart-icon {
+  margin-left: 20px;
 }
 
 /*Tar bort punkter bredvid home osv. */
@@ -57,8 +64,8 @@ p {
 .container {
   max-width: 1300px;
   margin: auto;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 header {
@@ -120,7 +127,7 @@ footer {
 }
 
 .categories {
-  margin: 70px 0;
+  margin: 50px 0;
 }
 .col-3 {
   flex: 25%;
@@ -133,10 +140,10 @@ footer {
 }
 /*bilder centrarade med whitespace från kanten*/
 .small-container {
-  max-width: 1080px;
+  max-width: 1300px;
   margin: auto;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .col-4 {
@@ -204,41 +211,41 @@ h4 {
   color: grey;
   margin-bottom: 20px;
 }
-.footer .col-1,
-.footer .col-2,
-.footer .col-3,
-.footer .col-4 {
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+  flex: 1;
   min-width: 250px;
   margin-bottom: 20px;
 }
-.footer .col-1 {
+.footer-col-1 {
   flex-basis: 30%;
 }
-.footer .col-2 {
+.footer-col-2 {
   flex: 1;
   text-align: center;
 }
-.footer .col-2 img {
-  width: 90px;
-  margin-bottom: 15px;
-  opacity: 0.9;
+.footer-col-2 img {
+  width: 100%;
+  height: auto;
 }
 
-.footer .footer-col-2 {
+.footer-col-2 {
   flex: 0 0 200px;
   margin: 0 auto;
 }
 
-.footer .col-3,
-.footer .col-4 {
+.footer-col-3,
+.footer-col-4 {
   flex-basis: 12%;
   text-align: center;
   object-fit: cover;
 }
 .col-3 img,
-.footer .col-4 img {
+.footer-col-4 img {
   width: 100%;
-  height: 260px;
+  height: 500px;
   object-fit: cover;
   display: block;
 }
@@ -256,3 +263,16 @@ ul {
   max-width: 500px;
   display: block;
 }
+
+.col-4 img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* all products*/
+.row-2 {
+  justify-content: space-between;
+  margin: 100px auto 50px;
+}
+
