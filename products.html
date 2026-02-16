@@ -2,14 +2,19 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css" />
-    <title>All Products - Ellaire</title>
-  </head>
+     <title>All Products - Ellaire</title>
 
+ </head>
   <body>
+    <div class="page-grid">
+    <!--header-->
+    <header class="site-header">
+      <div class="header">
+
       <a href="index.html" class="logo-link">
         <h1 class="site-title">Ellaire</h1>
       </a>
@@ -17,12 +22,12 @@
       <div class="container">
         <div class="navbar">
           <div class="logo">
-            <a href="index.html"><img src="images/logo.png" width="85px" alt="Ellaire logo" />
+            <a href="index.html">
+              <img src="images/logo.png" width="85px" alt="Ellaire logo" />
             </a>
           </div>
 
           <nav>
-
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="products.html">Products</a></li>
@@ -32,15 +37,23 @@
             </ul>
           </nav>
 
-          <a href="cart.html">
-            <img src="images/cart.png" class="cart-icon" alt="Shopping Cart" />
+          <a href="cart.html" class="cart-wrapper">
+            <img src="images/cart.png" class="cart-icon" alt="Shopping Cart"/>
+            <span id="cart-count" class="cart-count"></span>
           </a>
         </div>
       </div>
     </div>
-      <div class="row">
-        <a href="product.html">
+  </header>
+
+    <!--main-->
+    <main class="site-main">
+      <div class=" small-container">
+        <h2 class="title">All Products</h2>
+        <div class="products-grid">
+
         <div class="col-4">
+        <a href="product.html">
           <img src="images/woodchairx.png" alt="Wood Chair" />
           <h4>Wood Chair</h4>
           <p>$500.00</p>
@@ -160,8 +173,10 @@
         </div>
       </div>
     </div>
+    </main>
     <!-------- footer -------->
-    <div class="footer">
+    <footer class="site-footer"> 
+      <div class="footer">
       <div class="container">
         <div class="row">
           <div class="footer-col-1">
@@ -200,5 +215,26 @@
         </div>
       </div>
     </div>
-  </body>
+    </footer>
+    </div>
+
+  <script>
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+    const cartCount = document.getElementById("cart-count");
+    if (!cartCount) return;
+
+    if (totalItems > 0) {
+        cartCount.textContent = totalItems;
+        cartCount.style.display = "flex";
+    } else {
+        cartCount.style.display = "none";
+    }
+}
+
+updateCartCount();
+</script>
+</body>
 </html>

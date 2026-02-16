@@ -1,4 +1,29 @@
-/*Hela bakgrund rosa*/
+/*Page layout with CSS GRID*/
+.page-grid {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+site.header {
+  grid-row: 1;
+}
+
+.site-main {
+  grid-row: 2;
+  padding: 60px 0;
+}
+
+.site-footer {
+  grid-row: 3;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/*Always background pink*/
 body {
   background: radial-gradient(rgb(255, 235, 239), white);
   margin: 0;
@@ -28,6 +53,8 @@ body {
   justify-content: space-between;
   width: 100%;
 }
+
+/*push navigation to right*/
 nav {
   margin-left: auto;
 }
@@ -68,24 +95,9 @@ p {
   padding-right: 0;
 }
 
-header {
-  background-color: rgb(255, 202, 244);
-  grid-area: header;
-}
-
-main {
-  background-color: darkorange;
-  grid-area: main;
-}
-
 aside {
   background-color: darkslategrey;
   grid-area: aside;
-}
-
-footer {
-  background-color: indianred;
-  grid-area: footer;
 }
 
 .row {
@@ -108,6 +120,8 @@ footer {
   line-height: 60px;
   margin: 25px 0;
 }
+
+/*button styling*/
 .btn {
   display: inline-block;
   background: white;
@@ -141,8 +155,7 @@ footer {
 .small-container {
   max-width: 1300px;
   margin: auto;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding: 40px 20px;
 }
 
 .col-4 {
@@ -163,6 +176,7 @@ footer {
   color: grey;
 }
 
+/*underline under titles*/
 .title::after {
   content: "";
   background: rgb(244, 235, 237);
@@ -191,7 +205,7 @@ h4 {
   padding: 30px 0;
 }
 
-/*footer*/
+/*footer styling*/
 .footer {
   background: rgb(255, 227, 227);
   color: grey;
@@ -293,12 +307,12 @@ ul {
   margin-top: 20px;
 }
 .single-product input {
-  width: 50px;
+  width: 65px;
   height: 40px;
   padding: 10px;
-  font-size: 20px;
-  margin-right: 10px;
-  border: 1px solid #ff523b;
+  font-size: 18px;
+  margin-right: 15px;
+  border: 1px solid #000000;
 }
 input:focus {
   outline: none;
@@ -315,8 +329,8 @@ input:focus {
 }
 /* Media for less than 600 screen size*/
 @media only screen and (max-width: 600px) {
-  .row {
-    text-align: center;
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   .col-2,
   .col-3,
@@ -357,6 +371,8 @@ input:focus {
   cursor: pointer;
   display: none;
 }
+
+/*universal sizing*/
 * {
   box-sizing: border-box;
 }
@@ -378,7 +394,7 @@ input:focus {
   margin: 0 auto;
 }
 .small-container .row {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .single-product .col-2:first-child {
   flex: 0 0 55%;
@@ -393,17 +409,37 @@ input:focus {
 }
 
 .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: inherit;
-    position: relative;
-    z-index: 99999;
-    pointer-events: auto;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  z-index: 99999;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
-.brand img .brand span{
-    pointer-events: none;
+.brand img .brand span {
+  pointer-events: none;
+}
+/*cart bagde wrapper and styling*/
+.cart-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: rgb(255, 160, 211);
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
 }

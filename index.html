@@ -1,7 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
@@ -9,22 +12,27 @@
   </head>
 
   <body>
-    <div class="header">
+    <div class="page-grid">
 
-        <a href="index.html" class="logo-link">
-      <h1 class="site-title">Ellaire</h1>
-     </a>
+      <!--header-->
+      <header class="site-header">
+        <div class="header">
+      <a href="index.html" class="logo-link">
+        <h1 class="site-title">Ellaire</h1>
+      </a>
 
       <div class="container">
         <div class="navbar">
+
           <div class="logo">
-            <a href="index.html"></a>
-            <img src="images/logo.png" width="85px" alt="Ellaire logo" />
+            <a href="index.html"
+              ><img src="images/logo.png" width="85px" alt="Ellaire logo" />
+            </a>
           </div>
 
           <nav>
-            <ul id="MenuItems">
-              <li><a href="#">Home</a></li>
+            <ul>
+              <li><a href="index.html">Home</a></li>
               <li><a href="products.html">Products</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Contact</a></li>
@@ -32,11 +40,19 @@
             </ul>
           </nav>
 
-          <a href="cart.html">
-            <img src="images/cart.png" width="30px" height="30px" alt="Shopping Cart" />
+          <a href="cart.html" class="cart-wrapper">
+            <img src="images/cart.png" class="cart-icon" alt="Shopping cart" />
+            <span id="cart-count" class="cart-count"></span>
           </a>
         </div>
+        </div>
 
+        </div>
+        </header>
+
+        <!-- main -->
+         <main class="site-main">
+            <div class="container">
         <div class="row hero">
           <div class="col-2">
             <h1>Your home should feel like you!</h1>
@@ -53,7 +69,7 @@
           </div>
         </div>
       </div>
-    </div>
+
 
     <!-------- featured categories -------->
     <div class="categories">
@@ -80,129 +96,130 @@
     <!-------- featured products -------->
     <div class="small-container">
       <h2 class="title">Featured Products</h2>
+      <div class ="products-grid">
 
-      <div class="row">
         <div class="col-4">
-        <a href="product.html">
-          <img src="images/woodchairx.png" alt="Wood Chair" />
-          <h4>Wood Chair</h4>
-          <p>$500.00</p>
+          <a href="product.html">
+            <img src="images/woodchairx.png" alt="Wood Chair" />
+            <h4>Wood Chair</h4>
+            <p>$500.00</p>
           </a>
         </div>
 
         <div class="col-4">
-        <a href="product.html">
-          <img src="images/bartenderkitx.png" alt="Bartender Kit" />
-          <h4>Bartender Kit</h4>
-          <p>$150.00</p>
+          <a href="product.html">
+            <img src="images/bartenderkitx.png" alt="Bartender Kit" />
+            <h4>Bartender Kit</h4>
+            <p>$150.00</p>
           </a>
         </div>
 
         <div class="col-4">
-        <a href="product.html">
-          <img src="images/softpillowx.png" alt="Soft Pillow" />
-          <h4>Soft Pillow</h4>
-          <p>$250.00</p>
-        </a>
+          <a href="product.html">
+            <img src="images/softpillowx.png" alt="Soft Pillow" />
+            <h4>Soft Pillow</h4>
+            <p>$250.00</p>
+          </a>
         </div>
 
         <div class="col-4">
-        <a href="product.html">
-          <img src="images/stripedpillowx.png" alt="Striped Pillow" />
-          <h4>Striped Pillow</h4>
-          <p>$120.00</p>
-        </a>
+          <a href="product.html">
+            <img src="images/stripedpillowx.png" alt="Striped Pillow" />
+            <h4>Striped Pillow</h4>
+            <p>$120.00</p>
+          </a>
         </div>
 
         <div class="col-4">
-        <a href="product.html">
-          <img src="images/pinkpoufx.png" alt="Pink Pouf" />
-          <h4>Pink Pouf</h4>
-          <p>$800.00</p>
-        </a>
+          <a href="product.html">
+            <img src="images/pinkpoufx.png" alt="Pink Pouf" />
+            <h4>Pink Pouf</h4>
+            <p>$800.00</p>
+          </a>
         </div>
 
         <div class="col-4">
-        <a href="product.html">
-          <img src="images/lamp-threex.png" alt="Lamp Three" />
-          <h4>Lamp Three</h4>
-          <p>$500.00</p>
-        </a>
+          <a href="product.html">
+            <img src="images/lamp-threex.png" alt="Lamp Three" />
+            <h4>Lamp Three</h4>
+            <p>$500.00</p>
+          </a>
         </div>
 
         <div class="col-4">
-        <a href="product.html">
-          <img src="images/pinkartx.png" alt="Pink Art" />
-          <h4>Pink Art</h4>
-          <p>$5000.00</p>
-        </a>
+          <a href="product.html">
+            <img src="images/pinkartx.png" alt="Pink Art" />
+            <h4>Pink Art</h4>
+            <p>$5000.00</p>
+          </a>
         </div>
 
         <div class="col-4">
-        <a href="product.html">
-          <img src="images/lamptreex.png" alt="Lamp Tree" />
-          <h4>Lamp Tree</h4>
-          <p>$300.00</p>
-        </a>
+          <a href="product.html">
+            <img src="images/lamptreex.png" alt="Lamp Tree" />
+            <h4>Lamp Tree</h4>
+            <p>$300.00</p>
+          </a>
         </div>
 
         <div class="col-4">
-        <a href="product.html">
-          <img src="images/lamp-twox.png" alt="Lamp Two" />
-          <h4>Lamp Two</h4>
-          <p>$500.00</p>
-        </a>
+          <a href="product.html">
+            <img src="images/lamp-twox.png" alt="Lamp Two" />
+            <h4>Lamp Two</h4>
+            <p>$500.00</p>
+          </a>
         </div>
 
         <div class="col-4">
-        <a href="product.html">
-          <img src="images/glasses1x.png" alt="Glasses" />
-          <h4>Glasses</h4>
-          <p>$150.00</p>
-        </a>
+          <a href="product.html">
+            <img src="images/glasses1x.png" alt="Glasses" />
+            <h4>Glasses</h4>
+            <p>$150.00</p>
+          </a>
         </div>
 
         <div class="col-4">
-            <a href="product.html">
-          <img src="images/poufx.png" alt="Beige Pouf" />
-          <h4>Beige Pouf</h4>
-          <p>$800.00</p>
-        </a>
+          <a href="product.html">
+            <img src="images/poufx.png" alt="Beige Pouf" />
+            <h4>Beige Pouf</h4>
+            <p>$800.00</p>
+          </a>
         </div>
 
         <div class="col-4">
-        <a href="product.html">
-          <img src="images/pinkplatex.png" alt="Pink Mateus Bubbly Plate" />
-          <h4>Pink Mateus Bubbly Plate</h4>
-          <p>$1500.00</p>
-        </a>
+          <a href="product.html">
+            <img src="images/pinkplatex.png" alt="Pink Mateus Bubbly Plate" />
+            <h4>Pink Mateus Bubbly Plate</h4>
+            <p>$1500.00</p>
+          </a>
         </div>
 
         <div class="col-4">
-        <a href="product.html">
-          <img src="images/ceilinglamp.jpg" alt="Ceiling Lamp" />
-          <h4>ceilinglamp</h4>
-          <p>$3200.00</p>
-        </a>
+          <a href="product.html">
+            <img src="images/ceilinglamp.jpg" alt="Ceiling Lamp" />
+            <h4>ceilinglamp</h4>
+            <p>$3200.00</p>
+          </a>
         </div>
 
         <div class="col-4">
-        <a href="product.html">
-          <img src="images/blueplatex.png" alt="Blue Plate" />
-          <h4>Blue Plate</h4>
-          <p>$100.00</p>
-        </a>
+          <a href="product.html">
+            <img src="images/blueplatex.png" alt="Blue Plate" />
+            <h4>Blue Plate</h4>
+            <p>$100.00</p>
+          </a>
         </div>
 
         <div class="col-4">
-        <a href="product.html">
-          <img src="images/pinksofax.png" alt="Pink Sofa" />
-          <h4>Pink Sofa</h4>
-          <p>$1500.00</p>
-        </a>
+          <a href="product.html">
+            <img src="images/pinksofax.png" alt="Pink Sofa" />
+            <h4>Pink Sofa</h4>
+            <p>$1500.00</p>
+          </a>
         </div>
-      </div>
-    </div>
+        </div>
+        </div>
+
 
     <!-------- offer -------->
     <div class="offer">
@@ -227,8 +244,10 @@
         </div>
       </div>
     </div>
+</main>
     <!-------- footer -------->
-    <div class="footer">
+    <footer class="site-footer">
+     <div class="footer">
       <div class="container">
         <div class="row">
           <div class="footer-col-1">
@@ -238,11 +257,9 @@
 
           <div class="footer-col-2">
             <img src="images/logo.png" alt="logo" />
-            <p>
-              Ellaire Interior designs elegant, carefully curated interiors and
+            <p> Ellaire Interior designs elegant, carefully curated interiors and
               furniture pieces with a focus on quality, aesthetics, and timeless
-              style, created by Ella’s Design.
-            </p>
+              style, created by Ella’s Design.</p>
           </div>
 
           <div class="footer-col-3">
@@ -267,5 +284,28 @@
         </div>
       </div>
     </div>
+    </footer>
+    </div>
+
+    <!--Cart badge code-->
+    <script>
+      function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+        const cartCount = document.getElementById("cart-count");
+        if (!cartCount) return;
+
+        if (totalItems > 0) {
+          cartCount.textContent = totalItems;
+          cartCount.style.display = "flex";
+        } else {
+          cartCount.style.display = "none";
+        }
+      }
+
+      updateCartCount();
+
+    </script>
   </body>
 </html>
