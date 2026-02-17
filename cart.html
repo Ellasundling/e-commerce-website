@@ -8,38 +8,9 @@
 
   <body>
     <div class="page-grid">
-    <header class="site-header">
-    <div class="header">
-        <a href="index.html">
-        <h1 class="site-title"> Ellaire</h1>
-    </a>
+        <div id="header"></div>
 
-        <div class="container">
-        <div class="navbar">
 
-          <div class="logo">
-            <a href="index.html">
-                <img src="images/logo.png" width="85px" alt="Ellaire logo" />
-            </a>
-          </div>
-
-         <nav>
-            <ul id="MenuItems">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Account</a></li>
-            </ul>
-          </nav>
-          
-    <a href="cart.html" class="cart-wrapper">
-        <img src="images/cart.png" class="cart-icon" alt="Shopping Cart" />
-        <span id="cart-count" class="cart-count"></span>
-    </a>
-</div>
-</div>
-</header>
 
 <!-- main and cart content section-->
  <main class="site-main">
@@ -47,115 +18,16 @@
       <h2 class="title">Shopping Cart</h2>
       <div id="cart-items"></div>
       <h3 id="cart-total">Total</h3>
+      <div class="cart-buttons">
+        <a href="products.html" class="btn">Continue Shopping</a>
+        <div class="cart-continue-shopping">
+        <button class="btn">Continue Shopping</button>
     </div>
 </main>
+ <script src="script.js"></script>
+    <div id="footer">
+</div>
 
-
-<!-------- footer -------->
-    <footer class="site-footer">
-    <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="footer-col-1">
-            <h3>Download Our App</h3>
-            <p>Download App for Android and ios mobile phone.</p>
-          </div>
-
-          <div class="footer-col-2">
-            <img src="images/logo.png" alt="logo" />
-            <p>
-              Ellaire Interior designs elegant, carefully curated interiors and
-              furniture pieces with a focus on quality, aesthetics, and timeless
-              style, created by Ella’s Design.
-            </p>
-          </div>
-
-        
-
-          <div class="footer-col-3">
-            <h3>Useful Links</h3>
-            <ul>
-              <li>Coupons</li>
-              <li>Blog Post</li>
-              <li>Return Policy</li>
-              <li>Join Affiliate</li>
-            </ul>
-          </div>
-
-          <div class="footer-col-4">
-            <h3>Follow Us</h3>
-            <ul>
-              <li>Facebook</li>
-              <li>Instagram</li>
-              <li>Twitter</li>
-              <li>Youtube</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    </footer>
-    </div>
-
-
-    <!-- display cart items from localstorage-->
-    <script>
-      function loadCart() {
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        let cartItemsContainer = document.getElementById("cart-items");
-        let total = 0;
-
-        cartItemsContainer.innerHTML = "";
-
-        if (cart.length === 0) {
-          cartItemsContainer.innerHTML = "<p>Your Cart is Empty.</p>";
-          document.getElementById("cart-total").innerHTML = "";
-          return;
-        }
-
-        cart.forEach((item, index) => {
-          total += item.price * item.quantity;
-
-          cartItemsContainer.innerHTML += `
-                <div class="cart-item" style="margin-bottom: 20px; auto; display: flex; align-items: center; gap: 20px;">
-                    <img src= "images/woodchairx.png" style="width:100px; height:100px; object-fit:cover;">
-                    <div>
-                    <h4>${item.name}</h4>
-                    <p>Price: $${item.price}</p>
-                    <p>Quantity: ${item.quantity}</p>
-                    <p>Subtotal: $${item.price * item.quantity}</p>
-                    <button onclick="removeFromCart(${index})">Remove</button>
-                    </div>
-                </div>
-                <hr>
-                `;
-        });
-
-        document.getElementById("cart-total").innerHTML = `Total: $${total}`;
-      }
-      
-      function removeFromCart(index) {
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        cart.splice(index, 1);
-        localStorage.setItem("cart", JSON.stringify(cart));
-        loadCart();
-      }
-
-      function  updateCartCount (){
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        let totalIteems = cart.reduce ((sum, item) => sum + item.quantity, 0);
-
-        const cartCount = document.getElementById("cart-count");
-
-        if (cartCount){
-            cartCount.textContent = totalIteems; 
-            cartCount.style.display = totalIteems > 0 ? "flex" : "none";
-        }
-      }
-
-      loadCart();
-    updateCartCount();
-    </script>
   </body>
 </html>
 
