@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   /*HEADER*/
-
+  /*calling code and updates count - header in every html - link in html*/
   fetch("header.html")
     .then((response) => response.text())
     .then((data) => {
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   /*FOOTER*/
-
+  /*calling code - footer in every html - link in html*/
   fetch("footer.html")
     .then((response) => response.text())
     .then((data) => {
@@ -19,9 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   /*CART COUNT*/
-
+  /*cart - localstorage with quantity*/
   function updateCartCount() {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cart = JSON.parse(localStorage.getItem("cart")) || []; // AI helped with ||, if localstorage is empty - code not crash.
     let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
     const cartCount = document.getElementById("cart-count");
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /*PRODUCT IMAGE SWITCH*/
-
+  /*clicing on small images in product page*/
   const ProductImg = document.getElementById("Product-image");
   const SmallImg = document.getElementsByClassName("small-img");
 
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /*ADD TO CART*/
-
+  /* add to cart - purchase logic - saves to localstorage*/
   const addBtn = document.getElementById("add-to-cart");
 
   if (addBtn) {
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /*CART PAGE*/
-
+  /*cart items - price, image from html. Some help of AI (google gemini) for logic for fallback values || [] */
   function loadCart() {
     const cartItemsContainer = document.getElementById("cart-items");
     const cartTotal = document.getElementById("cart-total");
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cartTotal.innerHTML = "";
       return;
     }
-
+    /* Lines 102 - 118, help of YT video: https://www.youtube.com/watch?v=yQimoqo0-7g&list=PLjwm_8O3suyM_2Lo9aAIw3HqjOPor8j9g*/
     cart.forEach((item, index) => {
       total += item.price * item.quantity;
 
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     cartTotal.innerHTML = `Total: $${total}`;
   }
-
+  /*regret and clear cart with splice*/
   window.removeFromCart = function (index) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart.splice(index, 1);
