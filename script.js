@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-  /*HEADER*/
+/*HEADER*/
   /*calling code and updates count - header in every html - link in html*/
   fetch("header.html")
     .then((response) => response.text())
@@ -128,5 +127,4 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCartCount();
   };
 
-  loadCart();
-});
+loadCart();
